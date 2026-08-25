@@ -1,0 +1,608 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(99, 102, 241, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(6, 182, 212, 0.15),
+            transparent 30%
+        ),
+        #080d1a;
+
+    color: #f8fafc;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.orb {
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: 0.25;
+
+    pointer-events: none;
+}
+
+.orb-one {
+    width: 250px;
+    height: 250px;
+
+    background: #6366f1;
+
+    top: 5%;
+    left: -100px;
+}
+
+.orb-two {
+    width: 300px;
+    height: 300px;
+
+    background: #06b6d4;
+
+    right: -120px;
+    bottom: 5%;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    padding: 28px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: #67e8f9;
+
+    margin-right: 6px;
+}
+
+.nav-badge {
+    font-size: 11px;
+
+    color: #94a3b8;
+
+    padding: 8px 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: min(900px, 90%);
+
+    margin: auto;
+
+    padding-bottom: 40px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+
+    margin-top: 45px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 50px;
+
+    background: rgba(103, 232, 249, 0.08);
+
+    border: 1px solid rgba(103, 232, 249, 0.2);
+
+    color: #67e8f9;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 70px);
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+
+    font-weight: 800;
+}
+
+.hero h1 span {
+    background:
+        linear-gradient(
+            90deg,
+            #67e8f9,
+            #818cf8
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    max-width: 600px;
+
+    margin: 25px auto 40px;
+
+    color: #94a3b8;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   PREDICTION CARD
+========================= */
+
+.prediction-card {
+    max-width: 620px;
+
+    margin: auto;
+
+    padding: 32px;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(20px);
+}
+
+
+/* Card header */
+
+.card-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 28px;
+}
+
+.small-label {
+    color: #67e8f9;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.card-header h2 {
+    font-size: 20px;
+}
+
+.model-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(103, 232, 249, 0.08);
+
+    border: 1px solid rgba(103, 232, 249, 0.15);
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+label {
+    display: block;
+
+    font-size: 13px;
+
+    color: #cbd5e1;
+
+    margin-bottom: 9px;
+}
+
+.input-wrapper {
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 16px;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 12px;
+
+    transition: 0.2s;
+}
+
+.input-wrapper:focus-within {
+    border-color: #67e8f9;
+
+    box-shadow:
+        0 0 0 3px rgba(103, 232, 249, 0.08);
+}
+
+.input-wrapper input {
+    width: 100%;
+
+    padding: 15px 0;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-family: inherit;
+}
+
+.input-wrapper input::placeholder {
+    color: #64748b;
+}
+
+.input-wrapper span {
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* Remove number arrows */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+    margin: 0;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #06b6d4,
+            #6366f1
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+button span {
+    margin-left: 8px;
+
+    font-size: 18px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(99, 102, 241, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result-card {
+    margin-top: 22px;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(6, 182, 212, 0.1),
+            rgba(99, 102, 241, 0.1)
+        );
+
+    border: 1px solid rgba(103, 232, 249, 0.2);
+
+    animation: appear 0.4s ease;
+}
+
+.result-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    letter-spacing: 1.3px;
+
+    font-weight: 700;
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(34, 197, 94, 0.15);
+
+    color: #4ade80;
+
+    font-size: 11px;
+}
+
+.salary {
+    font-size: 36px;
+
+    font-weight: 800;
+
+    margin: 10px 0 5px;
+
+    color: #67e8f9;
+}
+
+.result-card p {
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-top: 18px;
+}
+
+.stat-card {
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    transition: 0.25s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.055);
+
+    border-color: rgba(103, 232, 249, 0.15);
+}
+
+.stat-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    font-size: 17px;
+}
+
+.stat-card strong {
+    font-size: 16px;
+}
+
+.stat-card p {
+    color: #64748b;
+
+    font-size: 9px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    margin-top: 28px;
+
+    color: #475569;
+
+    font-size: 10px;
+}
+
+.creator {
+    margin-top: 6px;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .hero {
+        margin-top: 25px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .prediction-card {
+        padding: 24px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-badge {
+        display: none;
+    }
+
+}
